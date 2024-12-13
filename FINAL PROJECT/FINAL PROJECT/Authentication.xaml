@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FINAL_PROJECT.Authentication">
+    <ContentPage.Content>
+        <Grid>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label Text="Login" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" />
+
+            <Entry x:Name="UsernameEntry" Placeholder="Username" HorizontalOptions="FillAndExpand" Grid.Row="1" />
+            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" HorizontalOptions="FillAndExpand" Grid.Row="2" />
+
+            <Button Text="Login" Clicked="OnLoginClicked" HorizontalOptions="Center" VerticalOptions="Center" FontSize="16" HeightRequest="40" Grid.Row="3" />
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

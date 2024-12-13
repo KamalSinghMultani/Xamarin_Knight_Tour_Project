@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FINAL_PROJECT.inputPage">
+    
+        <StackLayout
+        Spacing="20" Padding="30">
+        <Label Text="Knight's Tour" HorizontalOptions="CenterAndExpand" FontSize="Large" />
+
+        <!-- Grid size input -->
+        <Entry x:Name="RowsEntry" Placeholder="Enter Rows"/>
+        <Entry x:Name="ColsEntry" Placeholder="Enter Columns"/>
+
+        <!-- Start position input -->
+        <Entry x:Name="StartRowEntry" Placeholder="Knight Starting Row"/>
+        <Entry x:Name="StartColEntry" Placeholder="Knight Starting Column"/>
+
+        <!-- Number of trials input -->
+        <Entry x:Name="NumTrialsEntry" Placeholder="Number of Trials"/>
+
+        <!-- Start button -->
+        <Button Text="Start Simulation" Clicked="OnStartClicked"/>
+    </StackLayout>
+    
+</ContentPage>

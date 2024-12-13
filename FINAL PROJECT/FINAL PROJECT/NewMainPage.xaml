@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FINAL_PROJECT.NewMainPage">
+    <ContentPage.Resources>
+        <Style x:Key="SquareOutline" TargetType="BoxView">
+            <Setter Property="Color" Value="Black" />
+            <Setter Property="WidthRequest" Value="1" />
+            <Setter Property="HeightRequest" Value="1" />
+        </Style>
+
+        <Style x:Key="ChessCell" TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="BackgroundColor" Value="White" />
+        </Style>
+
+        <Style x:Key="ChessCellInverted" TargetType="Label" BasedOn="{StaticResource ChessCell}">
+            <Setter Property="BackgroundColor" Value="Black" />
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid x:Name="ChessBoardGrid" Grid.Row="1">
+            </Grid>
+            <ListView x:Name="TrialResultsList"
+                      SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="40">
+                            <StackLayout Padding="10,0,10,0">
+                                <Label Text="{Binding}" TextColor="Black" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
